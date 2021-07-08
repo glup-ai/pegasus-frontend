@@ -1,0 +1,62 @@
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+.input-field input + label {
+    color: rgba(255, 255, 255, 0.6) !important;
+    
+}
+.row .input-field input {
+    border-color: rgba(255, 255, 255, 0.6)   !important;
+    box-shadow: rgba(255, 255, 255, 0.6)   !important
+}
+  
+.input-field input:focus + label {
+    color: rgba(255, 255, 255, 0.6)  !important;
+}
+.row .input-field input:focus {
+    border-color: rgba(255, 255, 255, 0.6)  !important;
+    box-shadow: rgba(255, 255, 255, 0.6)  !important
+}
+
+input{
+    color:white;
+}
+
+.submit-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Who doesn't love a dirty hack? */
+#password{
+    -webkit-text-security: disc;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

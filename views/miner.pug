@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.top-half
+    div.pre-header jeg graver etter
+    div.header.text-orange kryptovaluta
+    div.logo.text-orange
+      i.fab.fa-bitcoin.fa-9x
+    div.buttons
+      div
+        button#toggle.waves-effect.waves-light.btn-large.btn-jupyter(onclick="initiateToggle()") bytt til maskinlæring
+    div.logout
+      a.waves-effect.waves-light.btn-small(href="/auth/logout") logg ut
+
+   

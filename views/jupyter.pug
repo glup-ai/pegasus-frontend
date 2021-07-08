@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.top-half
+    div.pre-header klar for
+    div.header.text-orange maskinlæring
+    div.logo.text-orange
+      i.fas.fa-graduation-cap.fa-9x
+    div.buttons
+      div
+        a.waves-effect.waves-light.btn-large.btn-jupyter.submit(href="http://jupyter.glup.ai") fortsett til jupyter
+      div
+        p eller
+      div
+        button#toggle.waves-effect.waves-light.btn-large.btn-mining(onclick="initiateToggle()") bytt til mining-modus
+    div.logout
+      a.waves-effect.waves-light.btn-small(href="/auth/logout") logg ut
+
