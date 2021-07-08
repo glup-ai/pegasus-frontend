@@ -41,7 +41,6 @@ app.use('/auth', authRouter);
 app.use('/', isLoggedIn, indexRouter);
 
 function isLoggedIn(req, res, next) {
-    return next();
     if(req.isAuthenticated()) {
         return next();
     } else {
