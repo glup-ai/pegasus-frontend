@@ -9,14 +9,14 @@ module.exports = {
     },
     jupyter: {
         host: process.env.JUPYTER_HOST,
-        port: process.env.JUPYTER_PASSWORD,
+        port: process.env.JUPYTER_PORT,
         username: process.env.JUPYTER_USERNAME,
         password: process.env.JUPYTER_PASSWORD,
         bootNum: process.env.JUPYTER_BOOT_NUM
     },
     miner: {
         host: process.env.MINER_HOST,
-        port: process.env.MINER_PASSWORD,
+        port: process.env.MINER_PORT,
         username: process.env.MINER_USERNAME,
         password: process.env.MINER_PASSWORD,
         bootNum: process.env.MINER_BOOT_NUM
