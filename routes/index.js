@@ -57,8 +57,9 @@ module.exports = function (keys) {
       return res.send({error:"Lost contact with Pegasus :("});
     }
 
-    let bootNum = currentMode == "miner" ? keys.miner.bootNum : keys.jupyter.bootNum;
+    let bootNum = currentMode == "miner" ?  keys.jupyter.bootNum : keys.miner.bootNum;
 
+    console.log(bootNum)
     ssh.connect({
         host: currentMode == "miner" ? keys.miner.host : keys.jupyter.host,
         port: currentMode == "miner" ? keys.miner.port : keys.jupyter.port,
@@ -68,7 +69,8 @@ module.exports = function (keys) {
       .then(
         function () {
           console.log("Connected");
-          ssh.execCommand(`efibootmgr -n ${bootNum}; reboot`).then(function(result) {
+          ssh.execCommand(`efibootmgr -n ${bootNum}; reboot;`).then(function(result) {
+            console.log(result)
             setTimeout(function(){ return res.send({success:true}); }, 5000);            
           });
         },
